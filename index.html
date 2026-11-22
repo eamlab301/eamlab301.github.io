@@ -41,7 +41,7 @@ h2{font-size:42px;font-weight:400;margin-bottom:6vh}
 .pi h3{font:400 40px "Cormorant Garamond",serif}
 .pi ul{list-style:none;padding:0;margin-top:20px;font-size:14px;color:var(--mute)} .pi li span{display:inline-block;width:130px;color:var(--ink)}
 .artists{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5vw}
-.artists .frame{aspect-ratio:1}
+.artists .frame{aspect-ratio:1;width:170px;max-width:100%}
 .artists svg{width:70%;align-self:end;fill:var(--ink);opacity:.55}
 .artists p{margin-top:12px}
 .alumni:hover span{color:var(--accent)!important}
@@ -168,12 +168,12 @@ flt.innerHTML=`<button data-a="0">All ${PUB.length}</button>`+Object.entries(AR)
 flt.onclick=e=>{if(e.target.dataset.a)show(e.target.dataset.a)};show('0');
 
 /* ---- members with animal faces ---- */
-const B=w=>`<path d="M${50-w} 100 Q${50-w} 72 50 70 Q${50+w} 72 ${50+w} 100Z"/><rect x="44" y="52" width="12" height="20" rx="5"/>`;
+const B=w=>`<path d="M${50-w} 100 Q${50-w} 67 50 65 Q${50+w} 67 ${50+w} 100Z"/><rect x="44.5" y="52" width="11" height="15" rx="4"/>`;
 const AN={
 p1:B(30)+'<ellipse cx="50" cy="40" rx="15" ry="16.5"/>',
 p2:B(32)+'<circle cx="50" cy="42" r="15"/><path d="M33 42 Q29 21 45 19 Q52 13 60 19 Q72 23 67 42Z"/>',
-p3:B(27)+'<path d="M34 44 Q32 23 50 23 Q68 23 66 44 L69 66 Q60 70 56 62 L44 62 Q40 70 31 66Z"/>',
-p4:B(28)+'<circle cx="50" cy="42" r="14.5"/><circle cx="50" cy="22" r="7.5"/>'};
+p3:B(29)+'<circle cx="50" cy="42" r="15"/><path d="M33 42 Q30 25 43 22 Q60 18 67 31 Q67 37 66 42Z"/>',
+p4:B(31)+'<path d="M36 40 Q36 56 50 57 Q64 56 64 40Z"/><path d="M35 41 L35 31 Q36 25 42 25 L58 25 Q64 25 65 31 L65 41Z"/>'};
 const MEM=[['이동휘','Donghwi Lee','M.S. Student','2024.09 –','p1'],['유승민','Seungmin Yu','M.S. Student','2025.03 –','p2'],['손창현','Changhyun Son','Undergraduate Researcher','2026.05 –','p3'],['이재민','Jaemin Lee','Undergraduate Researcher','2026.05 –','p4']];
 document.getElementById('members').innerHTML=MEM.map(m=>`<figure><div class="frame"><svg viewBox="0 0 100 100">${AN[m[4]]}</svg></div><p>${m[0]} <span class="label">${m[1]}</span><br><span class="label">${m[2]} · ${m[3]}</span></p></figure>`).join('');
 </script>
