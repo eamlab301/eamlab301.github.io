@@ -23,7 +23,7 @@ h1 i{color:var(--accent)}
 h2{font-size:42px;font-weight:400;margin-bottom:6vh}
 .kor{font-family:"Nanum Myeongjo",serif;color:var(--mute);margin-top:14px}
 .label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
-.rooms{display:grid;grid-template-columns:repeat(5,1fr);gap:2.5vw}
+.groups{display:grid;grid-template-columns:repeat(3,1fr);gap:3vw}.gl{font:400 13px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);border-top:1px solid var(--accent);padding-top:12px;margin-bottom:24px}.group .room{margin-bottom:5vh}.group .room .frame{aspect-ratio:16/9}
 .core{display:grid;grid-template-columns:1.3fr 1fr;gap:5vw;align-items:center;margin-bottom:10vh}.core .frame{aspect-ratio:16/9}.core h3{font:400 clamp(34px,4vw,52px)/1.1 'Cormorant Garamond',serif;margin-top:10px}
 .room .frame{aspect-ratio:1;margin-bottom:18px}
 .room h3{font:400 21px/1.25 "Cormorant Garamond",serif;margin-top:2px}
@@ -48,7 +48,7 @@ h2{font-size:42px;font-weight:400;margin-bottom:6vh}
 .alumni:hover span{color:var(--accent)!important}
 .alumni{display:inline-block;margin-top:8vh;padding-bottom:6px;border-bottom:1px solid var(--line);color:var(--mute);font-size:14px;max-width:900px}
 footer{padding:8vh 6vw;color:var(--mute);font-size:13px;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
-@media (max-width:760px){.hero,.pi,.core{grid-template-columns:1fr}.rooms,.artists{grid-template-columns:1fr 1fr}nav div{display:none}.cap{grid-template-columns:1fr}.toc{max-width:320px}}
+@media (max-width:760px){.hero,.pi,.core,.groups{grid-template-columns:1fr}.rooms,.artists{grid-template-columns:1fr 1fr}nav div{display:none}.cap{grid-template-columns:1fr}.toc{max-width:320px}}
 .mark{width:26px;height:26px;vertical-align:-7px;margin-right:10px}
 </style>
 </head>
@@ -68,12 +68,10 @@ footer{padding:8vh 6vw;color:var(--mute);font-size:13px;display:flex;justify-con
   <p class="label">Research</p><h2 class="serif" style="margin-bottom:10px">Mechanism &amp; Design of Functional Materials</h2>
   <p class="kor" style="margin:0 0 8vh">기능재료의 기작 규명과 설계</p>
   <div class="core"><div class="frame"><span class="label">figure</span></div><div><p class="label">Core theme</p><h3>Electron Active Materials</h3><p class="kor">전자 활성 소재</p></div></div>
-  <div class="rooms">
-    <div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">01</p><h3>Defects and Interfaces in Functional Materials</h3><p class="kor">기능재료의 결함과 계면</p></div>
-    <div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">02</p><h3>Catalyst using Active Vacancy for Ammonia Synthesis</h3><p class="kor">활성 공공을 이용한 암모니아 합성 촉매</p></div>
-    <div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">03</p><h3>Electrode Materials Design for Li or Na Ion Battery</h3><p class="kor">리튬·나트륨 이온 전지 전극 소재 설계</p></div>
-    <div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">04</p><h3>Hydrogen Storage Materials</h3><p class="kor">수소 저장 소재</p></div>
-    <div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">05</p><h3>Electronic Structure at Device Interfaces</h3><p class="kor">디바이스 계면의 전자 구조</p></div>
+  <div class="groups">
+    <div class="group"><p class="gl">Ammonia &amp; Catalysis</p><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">01</p><h3>Catalyst using Active Vacancy for Ammonia Synthesis</h3><p class="kor">활성 공공을 이용한 암모니아 합성 촉매</p></div></div>
+    <div class="group"><p class="gl">Intermetallics · Hydrides · Nitrides</p><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">02</p><h3>Hydrogen Storage Materials</h3><p class="kor">수소 저장 소재</p></div><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">03</p><h3>Electrode Materials Design for Li or Na Ion Battery</h3><p class="kor">리튬·나트륨 이온 전지 전극 소재 설계</p></div></div>
+    <div class="group"><p class="gl">Processing &amp; Devices</p><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">04</p><h3>Defects and Interfaces in Functional Materials</h3><p class="kor">기능재료의 결함과 계면</p></div><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">05</p><h3>Electronic Structure at Device Interfaces</h3><p class="kor">디바이스 계면의 전자 구조</p></div></div>
   </div>
 </section>
 
