@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+KR:wght@400;500&family=Nanum+Myeongjo&family=Inter:wght@300;400;500&display=swap">
 <style>
-:root{color-scheme:dark;--bg:#141312;--ink:#ebe6dc;--mute:#8f897f;--line:#2f2c28;--accent:#7f9bff;--frame:#1e1c1a}
+:root{color-scheme:dark;--bg:#141312;--ink:#ebe6dc;--mute:#8f897f;--line:#2f2c28;--accent:#0080ff;--frame:#1e1c1a}
 *{box-sizing:border-box;margin:0}
 body{background:var(--bg);color:var(--ink);font:300 16px/1.7 Inter,"Noto Sans KR",sans-serif}
 a{color:inherit;text-decoration:none}
@@ -61,7 +61,7 @@ footer{padding:8vh 6vw;color:var(--mute);font-size:13px;display:flex;justify-con
 </style>
 </head>
 <body>
-<nav><a class="serif" href="#"><svg class="mark" viewBox="-12 -12 24 24" aria-hidden="true"><path d="M-4.6-11H4.6L11-4.6V4.6L4.6 11H-4.6L-11 4.6V-4.6Z" fill="none" stroke="currentColor" stroke-width="1.4"/><g transform="rotate(-30) scale(1 .42)"><circle r="6.2" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"/><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/><ellipse cx="6.2" rx="2" ry="4.8" fill="#7f9bff" style="filter:drop-shadow(0 0 2px #7f9bff)"/></g></g></svg>EAML</a><div><a href="#rooms">Research</a><a href="#catalogue">Publications</a><a href="#artists">People</a><a href="#visit">Contact</a></div></nav>
+<nav><a class="serif" href="#"><svg class="mark" viewBox="-12 -12 24 24" aria-hidden="true"><path d="M-4.6-11H4.6L11-4.6V4.6L4.6 11H-4.6L-11 4.6V-4.6Z" fill="none" stroke="currentColor" stroke-width="1.4"/><g transform="rotate(-30) scale(1 .42)"><circle r="6.2" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"/><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/><ellipse cx="6.2" rx="2" ry="4.8" fill="#0080ff" style="filter:drop-shadow(0 0 2px #0080ff)"/></g></g></svg>EAML</a><div><a href="#rooms">Research</a><a href="#catalogue">Publications</a><a href="#artists">People</a><a href="#visit">Contact</a></div></nav>
 
 <section class="hero">
   <div>
@@ -117,7 +117,7 @@ footer{padding:8vh 6vw;color:var(--mute);font-size:13px;display:flex;justify-con
   <p style="margin-top:12px">31park@suwon.ac.kr · +82-31-220-2495</p>
 </section>
 
-<footer><span class="serif"><svg class="mark" viewBox="-12 -12 24 24" aria-hidden="true"><path d="M-4.6-11H4.6L11-4.6V4.6L4.6 11H-4.6L-11 4.6V-4.6Z" fill="none" stroke="currentColor" stroke-width="1.4"/><g transform="rotate(-30) scale(1 .42)"><circle r="6.2" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"/><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/><ellipse cx="6.2" rx="2" ry="4.8" fill="#7f9bff" style="filter:drop-shadow(0 0 2px #7f9bff)"/></g></g></svg>EAML</span></footer>
+<footer><span class="serif"><svg class="mark" viewBox="-12 -12 24 24" aria-hidden="true"><path d="M-4.6-11H4.6L11-4.6V4.6L4.6 11H-4.6L-11 4.6V-4.6Z" fill="none" stroke="currentColor" stroke-width="1.4"/><g transform="rotate(-30) scale(1 .42)"><circle r="6.2" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"/><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/><ellipse cx="6.2" rx="2" ry="4.8" fill="#0080ff" style="filter:drop-shadow(0 0 2px #0080ff)"/></g></g></svg>EAML</span></footer>
 
 <script>
 /* ---- hero: rotating truncated-octahedron cage, electrons drifting inside ---- */
@@ -126,7 +126,7 @@ const P=[[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
 for(const p of P)for(const a of[1,-1])for(const b of[1,-1]){const v=[0,0,0];v[p[1]]=a;v[p[2]]=2*b;V.push(v)}
 const E=[];V.forEach((u,i)=>V.forEach((w,j)=>{if(j>i&&(u[0]-w[0])**2+(u[1]-w[1])**2+(u[2]-w[2])**2==2)E.push([i,j])}));
 const L=E.map(()=>{const l=document.createElementNS(NS,'line');l.setAttribute('stroke','#ebe6dc');l.setAttribute('stroke-width','.025');svg.appendChild(l);return l});
-const C=[0,1,2].map(k=>{const c=document.createElementNS(NS,'circle');c.setAttribute('fill','#7f9bff');c.style.filter='drop-shadow(0 0 .12px #7f9bff) drop-shadow(0 0 .3px #7f9bff)';svg.appendChild(c);return c});
+const C=[0,1,2].map(k=>{const c=document.createElementNS(NS,'circle');c.setAttribute('fill','#0080ff');c.style.filter='drop-shadow(0 0 .12px #0080ff) drop-shadow(0 0 .3px #0080ff)';svg.appendChild(c);return c});
 const s=.95,rot=(v,t)=>{let[x,y,z]=v;const a=t*.15,b=.5;[x,z]=[x*Math.cos(a)+z*Math.sin(a),-x*Math.sin(a)+z*Math.cos(a)];[y,z]=[y*Math.cos(b)-z*Math.sin(b),y*Math.sin(b)+z*Math.cos(b)];return[x*s,y*s,z*s]};
 const ph=[[0,1.3,2.1],[2.2,.4,4],[4.1,3.3,1]];
 function f(ms){const t=ms/1000,R=V.map(v=>rot(v,t));
