@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EAML — Active Electrons</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nanum+Myeongjo&family=Inter:wght@300;400;500&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#141312;--ink:#ebe6dc;--mute:#8f897f;--line:#2f2c28;--accent:#7f9bff;--frame:#1e1c1a}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:300 16px/1.7 Inter,"Nanum Myeongjo",sans-serif}
+a{color:inherit;text-decoration:none}
+.serif{font-family:"Cormorant Garamond","Nanum Myeongjo",serif}
+nav{position:sticky;top:0;display:flex;justify-content:space-between;padding:18px 6vw;background:var(--bg);font-size:13px;letter-spacing:.12em;text-transform:uppercase;z-index:2}
+nav div a{margin-left:28px;color:var(--mute)} nav div a:hover{color:var(--accent)}
+section{padding:14vh 6vw;border-top:1px solid var(--line)}
+.hero{min-height:92vh;display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;border:0}
+.frame{background:var(--frame);display:grid;place-items:center;box-shadow:0 30px 60px -30px #000}
+.hero .frame{aspect-ratio:4/5}
+#cage{width:82%;height:auto}
+h1{font-size:clamp(44px,6vw,88px);line-height:1;font-weight:400}
+h1 i{color:var(--accent)}
+h2{font-size:42px;font-weight:400;margin-bottom:6vh}
+.kor{font-family:"Nanum Myeongjo",serif;color:var(--mute);margin-top:14px}
+.label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.rooms{display:grid;grid-template-columns:repeat(4,1fr);gap:3vw}
+.room .frame{aspect-ratio:1;margin-bottom:18px}
+.room h3{font:400 24px "Cormorant Garamond",serif}
+.cat{max-width:900px}
+.filters button{background:none;border:1px solid var(--line);color:var(--mute);font:400 12px Inter;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;margin:0 8px 10px 0;cursor:pointer}
+.filters button.on{color:var(--accent);border-color:var(--accent)}
+.yr{font:400 28px "Cormorant Garamond",serif;color:var(--accent);margin:7vh 0 0}
+.cap{display:grid;grid-template-columns:200px 1fr auto;gap:28px;align-items:start;padding:22px 0;border-bottom:1px solid var(--line)}
+.cap b{display:block;font:400 21px/1.3 "Cormorant Garamond",serif;margin-bottom:6px}
+.cap .au{font-size:13px;color:var(--mute)} .cap .au strong{color:var(--ink);font-weight:500} .cap .au em{font-style:normal;color:var(--ink)}
+.toc{aspect-ratio:16/10;background:var(--frame);display:grid;place-items:center;overflow:hidden;font:400 13px 'Cormorant Garamond',serif;color:var(--mute);text-align:center;padding:6px}
+.toc img{width:100%;height:100%;object-fit:contain;background:#fff}
+.cap .doi{color:var(--accent);font-size:13px;white-space:nowrap}
+.pi{display:grid;grid-template-columns:260px 1fr;gap:4vw;align-items:end;margin-bottom:10vh}
+.pi img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.pi h3{font:400 40px "Cormorant Garamond",serif}
+.pi ul{list-style:none;padding:0;margin-top:20px;font-size:14px;color:var(--mute)} .pi li span{display:inline-block;width:130px;color:var(--ink)}
+.artists{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5vw}
+.artists .frame{aspect-ratio:1}
+.artists svg{width:62%;stroke:var(--ink);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.artists svg .f{fill:var(--ink);stroke:none} .artists svg .a{stroke:var(--accent)}
+.artists p{margin-top:12px}
+.alumni:hover span{color:var(--accent)!important}
+.alumni{display:inline-block;margin-top:8vh;padding-bottom:6px;border-bottom:1px solid var(--line);color:var(--mute);font-size:14px;max-width:900px}
+footer{padding:8vh 6vw;color:var(--mute);font-size:13px;display:flex;justify-content:space-between;border-top:1px solid var(--line)}
+@media (max-width:760px){.hero,.pi{grid-template-columns:1fr}.rooms,.artists{grid-template-columns:1fr 1fr}nav div{display:none}.cap{grid-template-columns:1fr}.toc{max-width:320px}}
+.mark{width:26px;height:26px;vertical-align:-7px;margin-right:10px}
+</style>
+</head>
+<body>
+<nav><a class="serif" href="#"><svg class="mark" viewBox="-12 -12 24 24" aria-hidden="true"><path d="M-4.6-11H4.6L11-4.6V4.6L4.6 11H-4.6L-11 4.6V-4.6Z" fill="none" stroke="currentColor" stroke-width="1.4"/><g transform="rotate(-30) scale(1 .42)"><circle r="6.2" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"/><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/><ellipse cx="6.2" rx="2" ry="4.8" fill="#7f9bff" style="filter:drop-shadow(0 0 2px #7f9bff)"/></g></g></svg>EAML</a><div><a href="#rooms">Research</a><a href="#catalogue">Publications</a><a href="#artists">People</a><a href="#visit">Contact</a></div></nav>
+
+<section class="hero">
+  <div>
+    <p class="label">Electro-Active Materials Research Group · The University of Suwon</p>
+    <h1 class="serif" style="margin-top:24px">Where electrons<br>become <i>active</i></h1>
+    <p class="kor">전자의 활성을 설계해 에너지·촉매 소재를 개발합니다.</p>
+  </div>
+  <div class="frame"><svg id="cage" viewBox="-3 -3 6 6"></svg></div>
+</section>
+
+<section id="rooms">
+  <p class="label">Research areas</p><h2 class="serif">Research</h2>
+  <div class="rooms">
+    <div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">01</p><h3>Electrides</h3><p class="kor">전자 화합물 설계와 전자 구조</p></div>
+    <div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">02</p><h3>Ammonia Synthesis &amp; Catalysis</h3><p class="kor">저온·저압 암모니아 합성 촉매</p></div>
+    <div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">03</p><h3>Intermetallics, Hydrides &amp; Nitrides</h3><p class="kor">금속간 화합물·수소화물·질화물</p></div>
+    <div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">04</p><h3>Processing &amp; Devices</h3><p class="kor">공정 및 디바이스</p></div>
+  </div>
+</section>
+
+<section id="catalogue"><div class="cat">
+  <p class="label">Journal articles</p><h2 class="serif">Publications</h2>
+  <div class="filters" id="flt"></div>
+  <div id="pubs"></div>
+  <p class="label" style="margin-top:40px"><a href="https://scholar.google.com/citations?user=LnduE60AAAAJ" style="color:var(--accent)">Google Scholar →</a></p>
+  <p class="label" style="margin-top:10px"><strong style="color:var(--ink)">PI</strong> · <span style="color:var(--ink)">Lab members</span> · # equal contribution · * corresponding author</p>
+</div></section>
+
+<section id="artists">
+  <p class="label">Members</p><h2 class="serif">People</h2>
+  <div class="pi">
+    <img src="pi.jpg" alt="Sang-Won Park">
+    <div>
+      <p class="label">Principal Investigator</p>
+      <h3>Sang-Won Park</h3>
+      <p class="kor" style="margin-top:4px">박상원 · Assistant Professor, The University of Suwon</p>
+      <ul>
+        <li><span>2022 –</span>Assistant Professor, The University of Suwon</li>
+        <li><span>2021 – 2022</span>Staff Engineer, Samsung Electronics</li>
+        <li><span>2019 – 2021</span>Postdoc, Tokyo Tech · Visiting Researcher, NIMS</li>
+        <li><span>2019</span>Ph.D., Materials Science &amp; Engineering, Tokyo Tech</li>
+      </ul>
+    </div>
+  </div>
+  <div class="artists" id="members"></div>
+  <a class="alumni" href="alumni.html"><span class="serif" style="font-size:28px;color:var(--ink)">Alumni →</span></a>
+</section>
+
+<section id="visit">
+  <p class="label">Contact</p><h2 class="serif">Location &amp; Contact</h2>
+  <p>#407, First Engineering Building, The University of Suwon<br>17 Wauan-gil, Bongdam-eup, Hwaseong-si, Gyeonggi-do, Republic of Korea</p>
+  <p style="margin-top:12px">31park@suwon.ac.kr · +82-31-220-2495</p>
+</section>
+
+<footer><span class="serif"><svg class="mark" viewBox="-12 -12 24 24" aria-hidden="true"><path d="M-4.6-11H4.6L11-4.6V4.6L4.6 11H-4.6L-11 4.6V-4.6Z" fill="none" stroke="currentColor" stroke-width="1.4"/><g transform="rotate(-30) scale(1 .42)"><circle r="6.2" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"/><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/><ellipse cx="6.2" rx="2" ry="4.8" fill="#7f9bff" style="filter:drop-shadow(0 0 2px #7f9bff)"/></g></g></svg>EAML</span><span>KOR / ENG</span></footer>
+
+<script>
+/* ---- hero: rotating truncated-octahedron cage, electrons drifting inside ---- */
+(()=>{const svg=document.getElementById('cage'),NS='http://www.w3.org/2000/svg',V=[];
+const P=[[0,1,2],[0,2,1],[1,0,2],[1,2,0],[2,0,1],[2,1,0]];
+for(const p of P)for(const a of[1,-1])for(const b of[1,-1]){const v=[0,0,0];v[p[1]]=a;v[p[2]]=2*b;V.push(v)}
+const E=[];V.forEach((u,i)=>V.forEach((w,j)=>{if(j>i&&(u[0]-w[0])**2+(u[1]-w[1])**2+(u[2]-w[2])**2==2)E.push([i,j])}));
+const L=E.map(()=>{const l=document.createElementNS(NS,'line');l.setAttribute('stroke','#ebe6dc');l.setAttribute('stroke-width','.025');svg.appendChild(l);return l});
+const C=[0,1,2].map(k=>{const c=document.createElementNS(NS,'circle');c.setAttribute('fill','#7f9bff');c.style.filter='drop-shadow(0 0 .12px #7f9bff) drop-shadow(0 0 .3px #7f9bff)';svg.appendChild(c);return c});
+const s=.95,rot=(v,t)=>{let[x,y,z]=v;const a=t*.15,b=.5;[x,z]=[x*Math.cos(a)+z*Math.sin(a),-x*Math.sin(a)+z*Math.cos(a)];[y,z]=[y*Math.cos(b)-z*Math.sin(b),y*Math.sin(b)+z*Math.cos(b)];return[x*s,y*s,z*s]};
+const ph=[[0,1.3,2.1],[2.2,.4,4],[4.1,3.3,1]];
+function f(ms){const t=ms/1000,R=V.map(v=>rot(v,t));
+E.forEach(([i,j],k)=>{const a=R[i],b=R[j];L[k].setAttribute('x1',a[0]);L[k].setAttribute('y1',a[1]);L[k].setAttribute('x2',b[0]);L[k].setAttribute('y2',b[1]);L[k].setAttribute('opacity',.25+.6*((a[2]+b[2])/2+2)/4)});
+C.forEach((c,k)=>{const q=ph[k],e=[1.15*Math.sin(t*.37+q[0])*Math.cos(t*.21+q[1]),1.15*Math.sin(t*.29+q[1]),1.15*Math.cos(t*.33+q[2])*Math.sin(t*.17+q[0])],r=rot(e,t);
+c.setAttribute('cx',r[0]);c.setAttribute('cy',r[1]);c.setAttribute('r',.07+.025*r[2]);c.setAttribute('opacity',.6+.15*r[2])});
+requestAnimationFrame(f)}requestAnimationFrame(f)})();
+
+/* ---- publications ---- */
+const AR={2:'Ammonia & Catalysis',3:'Intermetallics · Hydrides · Nitrides',4:'Processing & Devices'};
+const PUB=[
+[2026,4,'Molecular Interface Engineering of WS₂–WO₃ Hybrid Nanocomposites for Selective Sub-50 ppb H₂S Detection','Hyoungwon Park#, Donghwi Lee#, Ali Mirzaei, Silke H. Christiansen, Sang-Won Park, Jae-Hun Kim, Changkyoo Park','Chem. Eng. J. 550, 183327','10.1016/j.cej.2026.183327'],
+[2026,2,'Balancing N₂ Activation in Two-Dimensional Electrides for Ammonia Synthesis','Ruoqian Jiang#, Seungmin Yu#, Fangkun Sun#, Miao Xu, Xiaojun Lu, Zichuang Li, Wen-Qian Li, Kailong Qian, Sijia Zheng, Jiaqi Wang, Yanpeng Qi, Jun Li, Linfeng Pan, Sang-Won Park*, Jiazhen Wu*, Jie-Sheng Chen, Tian-Nan Ye*','J. Am. Chem. Soc. 148, 31727','10.1021/jacs.5c22746'],
+[2025,4,'Improving the Conductivity and Stability of Silver Nanowires Through Spontaneous Ligand Exchange for Joule Heating','Junhyeok Kwon, Joon-Young Soh, HyeonOh Shin, Sungjun Lim, So Yeon Yoon, Wang-Hyo Kim, Deok-Ho Roh, Moosung Choi, Sang-Won Park*, EunAe Cho*, Tae-Hyuk Kwon*, Ji Hoon Seo*','Angew. Chem. Int. Ed. 64, e202518337','10.1002/ange.202518337'],
+[2023,2,'Multiple reaction pathway on alkaline earth imide supported catalysts for efficient ammonia synthesis','Zichuang Li, Yangfan Lu, Jiang Li, Miao Xu, Yanpeng Qi, Sang-Won Park, Masaaki Kitano*, Hideo Hosono*, Jie-Sheng Chen, Tian-Nan Ye*','Nat. Commun. 14, 6373','10.1038/s41467-023-42050-7'],
+[2023,4,'Synthesis of Stable Iodoplumbate and Perovskite for Efficient Annealing-Free Device and Long-term Storage','Jihyun Kim#, Sang-Won Park#, Younghyun Lee, Hideo Hosono, Byungwoo Park, Jinhyun Kim*','SusMat 3, 821','10.1002/sus2.163'],
+[2023,2,'Topological insulator as an efficient catalyst for oxidative carbonylation of amines','Jiang Li, Jiazhen Wu, Sang-Won Park, Masato Sasase, Tian-Nan Ye, Yangfan Lu, Masayoshi Miyazaki, Toshiharu Yokoyama, Tomofumi Tada*, Masaaki Kitano*, Hideo Hosono*','Sci. Adv. 9, eadh9104','10.1126/sciadv.adh9104'],
+[2023,4,'Reinforcing synaptic plasticity of defect-tolerant states in alloyed 2D artificial transistors','Jina Bak, Seunggyu Kim, Kyumin Park, Jeechan Yoon, Mino Yang, Un Jeong Kim, Hideo Hosono, Jihyang Park, Bolim You, Ojun Kwon, Byungjin Cho, Sang-Won Park*, Myung Gwan Hahm*, Moonsang Lee*','ACS Appl. Mater. Interfaces 15, 39539','10.1021/acsami.3c07578'],
+[2023,4,'Nature of Photoconductivity in Self-Powered Single-Atomic-Layered Nb-Doped WSe₂ Phototransistors','Jihyang Park, Seunggyu Kim, Mino Yang, Hideo Hosono, Kyumin Park, Jeechan Yoon, Jina Bak, Bolim You, Sang-Won Park*, Myung Gwan Hahm*, Moonsang Lee*','ACS Photonics 10, 2930',''],
+[2023,2,'Encapsulated C12A7 electride material enables multistep electron transfer process for cross-coupling reactions','Bo Dai, Zichuang Li, Miao Xu, Jiang Li, Yangfan Lu, Jiantao Zai, Liuyin Fan, Sang-Won Park, Masato Sasase, Masaaki Kitano, Hideo Hosono, Xin-Hao Li, Tian-Nan Ye*, Jie-Sheng Chen*','J. Mater. Chem. A','10.1039/D2TA08899A'],
+[2022,3,'Unique Conduction Band Minimum of Semiconductors Possessing a Zincblende-Type Framework','Hiroshi Mizoguchi#*, Sang-Won Park#, Takayoshi Katase, Jiahao Yu, Junjie Wang, Hideo Hosono*','Inorg. Chem. 61, 10359','10.1021/acs.inorgchem.2c00884'],
+[2021,2,'Dissociative and Associative Concerted Mechanism for Ammonia Synthesis over Co-Based Catalyst','Tian-Nan Ye#*, Sang-Won Park#, Yangfan Lu#, Jiang Li, Jiazhen Wu, Masato Sasase, Masaaki Kitano*, Hideo Hosono*','J. Am. Chem. Soc. 143, 12857','10.1021/jacs.1c06657'],
+[2021,3,'A View on Formation Gap in Transition Metal Hydrides and Its Collapse','Hiroshi Mizoguchi#*, Sang-Won Park#, Hideo Hosono*','J. Am. Chem. Soc. 143, 11345','10.1021/jacs.1c06307'],
+[2021,2,'C₂ Vacancy-Mediated N₂ Activation over Ni-Loaded Rare-Earth Dicarbides for Ammonia Synthesis','Yiliguma#, Sang-Won Park#, Jiang Li#, Masato Sasase, Masaaki Kitano, Hideo Hosono*','ACS Catal. 11, 7595','10.1021/acscatal.1c01646'],
+[2021,3,'Origin of Metallic Nature of Na₃N','Hiroshi Mizoguchi*, Sang-Won Park, Takayoshi Katase, Grigori V. Vazhenin, Junghwan Kim, Hideo Hosono*','J. Am. Chem. Soc. 143, 69','10.1021/jacs.0c11047'],
+[2020,2,'Efficient Ammonia Synthesis over Phase-Separated Nickel-Based Intermetallic Catalysts','Tian-Nan Ye, Yangfan Lu, Yasukazu Kobayashi, Jiang Li, Sang-Won Park, Masato Sasase, Masaaki Kitano*, Hideo Hosono*','J. Phys. Chem. C 124, 28589','10.1021/acs.jpcc.0c09590'],
+[2020,2,'Intermetallic ZrPd₃-Embedded Nanoporous ZrC as an Efficient and Stable Catalyst of the Suzuki Cross-Coupling Reaction','Yangfan Lu#*, Tian-Nan Ye#, Sang-Won Park#, Jiang Li, Masato Sasase, Hitoshi Abe, Yasuhiro Niwa, Masaaki Kitano, Hideo Hosono*','ACS Catal. 10, 14366','10.1021/acscatal.0c03416'],
+[2020,2,'Contribution of Nitrogen Vacancies to Ammonia Synthesis over Metal Nitride Catalysts','Tian-Nan Ye#, Sang-Won Park#, Yangfan Lu#, Jiang Li, Masato Sasase, Masaaki Kitano*, Hideo Hosono*','J. Am. Chem. Soc. 143, 14374','10.1021/jacs.0c06624'],
+[2020,2,'Vacancy-enabled N₂ activation for ammonia synthesis on an Ni-loaded catalyst','Tian-Nan Ye#, Sang-Won Park#, Yangfan Lu#, Jiang Li, Masato Sasase, Masaaki Kitano*, Tomofumi Tada, Hideo Hosono*','Nature 583, 391','10.1038/s41586-020-2464-9'],
+[2019,3,'Cation Clustering in Intermetallics: The Modular Bonding Schemes of CaCu and Ca₂Cu','Sang-Won Park, Hideo Hosono*, Daniel C. Fredrickson*','Inorg. Chem. 58, 10313','10.1021/acs.inorgchem.9b01486'],
+[2019,3,'Hydrogen-Insertion-Induced Itinerant Ferromagnetism in Zr₂CoH₄.₈ with Co Chains','Hiroshi Mizoguchi*, Satoru Matsuishi, Sang-Won Park, Hideo Hosono*','J. Phys. Chem. C 123, 14964','10.1021/acs.jpcc.9b03793'],
+[2019,3,'Zeolitic Intermetallics: LnNiSi (Ln = La–Nd)','Hiroshi Mizoguchi*, Sang-Won Park, Kazuhisa Kishida, Masaaki Kitano, Junghwan Kim, Masato Sasase, Takashi Honda, Kazutaka Ikeda, Toshiya Otomo, Hideo Hosono*','J. Am. Chem. Soc. 141, 3376','10.1021/jacs.8b12784'],
+[2017,3,'Transformation of chromium coordination environment in LaCrAsO induced by hydride doping: The formation of La₂Cr₂As₂OᵧHₓ','Sang-Won Park, Hiroshi Mizoguchi, Haruhiro Hiraka, Kazutaka Ikeda, Toshiya Otomo, Hideo Hosono*','Inorg. Chem. 56, 13642','10.1021/acs.inorgchem.7b02316'],
+[2017,3,'Cubic Fluorite-Type CaH₂ with a Small Bandgap','Hiroshi Mizoguchi*, Sang-Won Park, Takashi Honda, Kazutaka Ikeda, Toshiya Otomo, Hideo Hosono*','J. Am. Chem. Soc. 139, 11317','10.1021/jacs.7b05746'],
+[2016,4,'Two-Dimensional Atomic-Layered Alloy Junctions for High-Performance Wearable Chemical Sensor','Byungjin Cho*, Ah Ra Kim, Dong Jae Kim, Hee-Suk Chung, Sun Young Choi, Jung-Dae Kwon, Sang-Won Park, Yonghun Kim, Byoung Hun Lee, Kyu Hwan Lee, Dong-Ho Kim, Jaewook Nam, Myung Gwan Hahm*','ACS Appl. Mater. Interfaces 8, 19635','10.1021/acsami.6b05943'],
+[2016,4,'Alloyed 2D Metal-Semiconductor Atomic Layer Junctions','Ah Ra Kim, Yonghun Kim, Jaewook Nam, Hee-Suk Chung, Dong Jae Kim, Jung-Dae Kwon, Sang-Won Park, Jucheol Park, Sun Young Choi, Byoung Hun Lee, Ji Hyeon Park, Kyu Hwan Lee, Dong-Ho Kim, Sung Mook Choi, Pulickel M. Ajayan, Myung Gwan Hahm*, Byungjin Cho*','Nano Lett. 16, 1890','10.1021/acs.nanolett.5b05036'],
+[2014,3,'New LaMAsHₓ (M = Co, Ni, or Cu) Arsenides with Covalent M–H Chains','Hiroshi Mizoguchi, Sang-Won Park, H. Hiraka, K. Ikeda, Toshiya Otomo, Hideo Hosono*','J. Am. Chem. Soc. 136, 17390','10.1021/ja509965z'],
+[2014,4,'Graphene-based gas sensor: Metal decoration effect and application to a flexible device','Byungjin Cho*, Jongwon Yoon, Myung Gwan Hahm, Dong-Ho Kim, Ah Ra Kim, Yung Ho Kahng, Sang-Won Park, Young-Joo Lee, Sung-Gyu Park, Jung-Dae Kwon, Chang Su Kim, Myungkwan Song, Yongsoo Jeong, Kee-Seok Nam, Heung Cho Ko','J. Mater. Chem. C 2, 5280',''],
+[2014,3,'An Anti-CuO₂-type Metal Hydride Square Net Structure in Ln₂M₂As₂Hₓ (Ln = La or Sm, M = Ti, V, Cr, or Mn)','Hiroshi Mizoguchi*, Sang-Won Park, Haruhiro Hiraka, Kazutaka Ikeda, Toshiya Otomo, Hideo Hosono','Angew. Chem. Int. Ed. 53, 1','10.1002/ange.201409023'],
+[2013,3,'Magnetic Structure and Electromagnetic Properties of LnCrAsO with a ZrCuSiAs-type Structure (Ln = La, Ce, Pr, and Nd)','Sang-Won Park, Hiroshi Mizoguchi, Shin-ichi Shamoto, Katsuaki Kodama, Toshiya Otomo, Satoru Matsuishi, Toshio Kamiya, Hideo Hosono*','Inorg. Chem. 52, 13363','10.1021/ic401487q']];
+const MEMB=['Donghwi Lee','Seungmin Yu','Changhyun Son','Jaemin Lee'];
+const hl=p=>{let a=p[3].replace(/Sang-Won Park[#*]*/g,m=>`<strong>${m}</strong>`);if(p[0]>=2024)MEMB.forEach(n=>a=a.replace(new RegExp(n+'[#*]*','g'),m=>`<em>${m}</em>`));return a};
+const flt=document.getElementById('flt'),box=document.getElementById('pubs');
+function show(a){flt.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.a==a));let y=0,h='';
+PUB.filter(p=>a=='0'||p[1]==a).forEach(p=>{if(p[0]!=y){y=p[0];h+=`<p class="yr">${y}</p>`}
+const k=p[5]?p[5].replace('/','_'):p[4].replace(/\W+/g,'').slice(0,20)+p[0];
+h+=`<div class="cap"><div class="toc"><img src="toc/${k}.jpg" alt="" loading="lazy" onerror="this.replaceWith(document.createTextNode('${p[4].split(/ \d/)[0]}'))"></div><div><b>${p[2]}</b><p class="au">${hl(p)}</p><p class="label" style="margin-top:6px">${p[4]} · ${AR[p[1]]}</p></div>${p[5]?`<a class="doi" href="https://doi.org/${p[5]}">doi →</a>`:'<span></span>'}</div>`});box.innerHTML=h}
+flt.innerHTML=`<button data-a="0">All ${PUB.length}</button>`+Object.entries(AR).map(([k,v])=>`<button data-a="${k}">${v}</button>`).join('');
+flt.onclick=e=>{if(e.target.dataset.a)show(e.target.dataset.a)};show('0');
+
+/* ---- members with animal faces ---- */
+const EY='<circle class="f" cx="41" cy="56" r="2.6"/><circle class="f" cx="59" cy="56" r="2.6"/>';
+const AN={
+fox:'<path d="M24 40 Q50 30 76 40 L50 84Z"/><path d="M26 42 L27 14 L44 34 M74 42 L73 14 L56 34"/>'+EY+'<circle class="f a" cx="50" cy="80" r="2.6" style="fill:var(--accent)"/>',
+cat:'<circle cx="50" cy="58" r="26"/><path d="M29 44 L30 17 L46 34 M71 44 L70 17 L54 34"/>'+EY+'<path class="a" d="M47 64 L53 64 L50 67Z M30 64 L16 61 M30 68 L16 70 M70 64 L84 61 M70 68 L84 70"/>',
+bear:'<circle cx="27" cy="34" r="9"/><circle cx="73" cy="34" r="9"/><circle cx="50" cy="57" r="27"/><ellipse cx="50" cy="67" rx="11" ry="8"/>'+EY+'<ellipse class="f a" cx="50" cy="64" rx="3.5" ry="2.5" style="fill:var(--accent)"/>',
+rabbit:'<ellipse cx="40" cy="26" rx="6" ry="19"/><ellipse cx="60" cy="26" rx="6" ry="19"/><ellipse cx="50" cy="64" rx="23" ry="21"/>'+EY+'<path class="a" d="M48 64 L52 64 L50 66.5Z M50 66.5 Q46 71 43 69 M50 66.5 Q54 71 57 69"/>'};
+const MEM=[['이동휘','Donghwi Lee','M.S. Student','2024.09 –','fox'],['유승민','Seungmin Yu','M.S. Student','2025.03 –','bear'],['손창현','Changhyun Son','Undergraduate Researcher','2026.05 –','cat'],['이재민','Jaemin Lee','Undergraduate Researcher','2026.05 –','rabbit']];
+document.getElementById('members').innerHTML=MEM.map(m=>`<figure><div class="frame"><svg viewBox="0 0 100 100">${AN[m[4]]}</svg></div><p>${m[0]} <span class="label">${m[1]}</span><br><span class="label">${m[2]} · ${m[3]}</span></p></figure>`).join('');
+</script>
+</body>
+</html>

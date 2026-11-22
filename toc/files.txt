@@ -1,0 +1,30 @@
+# TOC 그림을 아래 파일명(.jpg)으로 이 폴더에 넣으면 자동으로 표시됩니다.
+10.1016_j.cej.2026.183327.jpg	2026	Molecular Interface Engineering of WS₂–WO₃ Hybrid Nanocomposites for S
+10.1021_jacs.5c22746.jpg	2026	Balancing N₂ Activation in Two-Dimensional Electrides for Ammonia Synt
+10.1002_ange.202518337.jpg	2025	Improving the Conductivity and Stability of Silver Nanowires Through S
+10.1038_s41467-023-42050-7.jpg	2023	Multiple reaction pathway on alkaline earth imide supported catalysts 
+10.1002_sus2.163.jpg	2023	Synthesis of Stable Iodoplumbate and Perovskite for Efficient Annealin
+10.1126_sciadv.adh9104.jpg	2023	Topological insulator as an efficient catalyst for oxidative carbonyla
+10.1021_acsami.3c07578.jpg	2023	Reinforcing synaptic plasticity of defect-tolerant states in alloyed 2
+ACSPhotonics1029302023.jpg	2023	Nature of Photoconductivity in Self-Powered Single-Atomic-Layered Nb-D
+10.1039_D2TA08899A.jpg	2023	Encapsulated C12A7 electride material enables multistep electron trans
+10.1021_acs.inorgchem.2c00884.jpg	2022	Unique Conduction Band Minimum of Semiconductors Possessing a Zincblen
+10.1021_jacs.1c06657.jpg	2021	Dissociative and Associative Concerted Mechanism for Ammonia Synthesis
+10.1021_jacs.1c06307.jpg	2021	A View on Formation Gap in Transition Metal Hydrides and Its Collapse
+10.1021_acscatal.1c01646.jpg	2021	C₂ Vacancy-Mediated N₂ Activation over Ni-Loaded Rare-Earth Dicarbides
+10.1021_jacs.0c11047.jpg	2021	Origin of Metallic Nature of Na₃N
+10.1021_acs.jpcc.0c09590.jpg	2020	Efficient Ammonia Synthesis over Phase-Separated Nickel-Based Intermet
+10.1021_acscatal.0c03416.jpg	2020	Intermetallic ZrPd₃-Embedded Nanoporous ZrC as an Efficient and Stable
+10.1021_jacs.0c06624.jpg	2020	Contribution of Nitrogen Vacancies to Ammonia Synthesis over Metal Nit
+10.1038_s41586-020-2464-9.jpg	2020	Vacancy-enabled N₂ activation for ammonia synthesis on an Ni-loaded ca
+10.1021_acs.inorgchem.9b01486.jpg	2019	Cation Clustering in Intermetallics: The Modular Bonding Schemes of Ca
+10.1021_acs.jpcc.9b03793.jpg	2019	Hydrogen-Insertion-Induced Itinerant Ferromagnetism in Zr₂CoH₄.₈ with 
+10.1021_jacs.8b12784.jpg	2019	Zeolitic Intermetallics: LnNiSi (Ln = La–Nd)
+10.1021_acs.inorgchem.7b02316.jpg	2017	Transformation of chromium coordination environment in LaCrAsO induced
+10.1021_jacs.7b05746.jpg	2017	Cubic Fluorite-Type CaH₂ with a Small Bandgap
+10.1021_acsami.6b05943.jpg	2016	Two-Dimensional Atomic-Layered Alloy Junctions for High-Performance We
+10.1021_acs.nanolett.5b05036.jpg	2016	Alloyed 2D Metal-Semiconductor Atomic Layer Junctions
+10.1021_ja509965z.jpg	2014	New LaMAsHₓ (M = Co, Ni, or Cu) Arsenides with Covalent M–H Chains
+JMaterChemC252802014.jpg	2014	Graphene-based gas sensor: Metal decoration effect and application to 
+10.1002_ange.201409023.jpg	2014	An Anti-CuO₂-type Metal Hydride Square Net Structure in Ln₂M₂As₂Hₓ (Ln
+10.1021_ic401487q.jpg	2013	Magnetic Structure and Electromagnetic Properties of LnCrAsO with a Zr

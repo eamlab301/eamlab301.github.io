@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EAML — Former Members</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Nanum+Myeongjo&family=Inter:wght@300;400&display=swap">
+<style>
+:root{color-scheme:dark;--bg:#141312;--ink:#ebe6dc;--mute:#8f897f;--line:#2f2c28;--accent:#7f9bff}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font:300 16px/1.7 Inter,"Nanum Myeongjo",sans-serif}
+a{color:inherit;text-decoration:none}
+nav{display:flex;justify-content:space-between;padding:18px 6vw;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+nav a:last-child{color:var(--mute)} nav a:hover{color:var(--accent)}
+section{padding:12vh 6vw}
+.label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+h1{font:400 clamp(40px,5vw,64px)/1.1 "Cormorant Garamond",serif;margin:10px 0 8vh}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));border-top:1px solid var(--line)}
+.grid div{padding:22px 0;border-bottom:1px solid var(--line);font-family:"Nanum Myeongjo",serif;font-size:19px}
+.grid span{display:block;font:300 12px Inter;letter-spacing:.1em;color:var(--mute);margin-top:4px}
+footer{padding:8vh 6vw;color:var(--mute);font-size:13px;border-top:1px solid var(--line)}
+.mark{width:26px;height:26px;vertical-align:-7px;margin-right:10px}
+</style>
+</head>
+<body>
+<nav><a href="index.html" style="font-family:'Cormorant Garamond',serif"><svg class="mark" viewBox="-12 -12 24 24" aria-hidden="true"><path d="M-4.6-11H4.6L11-4.6V4.6L4.6 11H-4.6L-11 4.6V-4.6Z" fill="none" stroke="currentColor" stroke-width="1.4"/><g transform="rotate(-30) scale(1 .42)"><circle r="6.2" fill="none" stroke="currentColor" stroke-width="1.4" opacity=".4"/><g><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/><ellipse cx="6.2" rx="2" ry="4.8" fill="#7f9bff" style="filter:drop-shadow(0 0 2px #7f9bff)"/></g></g></svg>EAML</a><a href="index.html#artists">← People</a></nav>
+<section>
+  <p class="label">Alumni</p>
+  <h1>Former Members</h1>
+  <div class="grid" id="g"></div>
+</section>
+<footer>EAML · The University of Suwon</footer>
+<script>
+const A=[['정태우','Undergraduate · 2026.07 – 2026.11'],['박은우','Undergraduate · 2026.05 – 2026.11'],['김민혁','Undergraduate · 2025.07 – 2026.08'],
+['김수아'],['김주희'],['배영호'],['이상욱'],['이현서'],['김동민'],['김상준'],['김예은'],['이나은'],['김민중'],['이보경'],['설지윤'],['강성모'],['황윤규'],['박신영']];
+document.getElementById('g').innerHTML=A.map(a=>`<div>${a[0]}<span>${a[1]||'&nbsp;'}</span></div>`).join('');
+</script>
+</body>
+</html>
