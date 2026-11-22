@@ -173,7 +173,7 @@ const AN={
 p1:B(38)+'<ellipse cx="50" cy="40" rx="15" ry="16.5"/>',
 p2:B(40)+'<circle cx="50" cy="42" r="15"/><path d="M33 42 Q29 21 45 19 Q52 13 60 19 Q72 23 67 42Z"/>',
 p3:B(37)+'<circle cx="50" cy="42" r="15"/><path d="M33 42 Q30 25 43 22 Q60 18 67 31 Q67 37 66 42Z"/>',
-p4:B(39)+'<path d="M36 40 Q36 56 50 57 Q64 56 64 40Z"/><path d="M35 41 L35 31 Q36 25 42 25 L58 25 Q64 25 65 31 L65 41Z"/>'};
+p4:B(39)+'<circle cx="50" cy="43" r="14.5"/><circle cx="37" cy="37" r="6"/><circle cx="42" cy="29" r="7"/><circle cx="51" cy="26" r="7.5"/><circle cx="60" cy="29" r="7"/><circle cx="64" cy="37" r="6"/>'};
 const MEM=[['이동휘','Donghwi Lee','M.S. Student','2024.09 –','p1'],['유승민','Seungmin Yu','M.S. Student','2025.03 –','p2'],['손창현','Changhyun Son','Undergraduate Researcher','2026.05 –','p3'],['이재민','Jaemin Lee','Undergraduate Researcher','2026.05 –','p4']];
 document.getElementById('members').innerHTML=MEM.map(m=>`<figure><div class="frame"><svg viewBox="0 0 100 100">${AN[m[4]]}</svg></div><p>${m[0]} <span class="label">${m[1]}</span><br><span class="label">${m[2]} · ${m[3]}</span></p></figure>`).join('');
 </script>
