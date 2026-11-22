@@ -42,8 +42,7 @@ h2{font-size:42px;font-weight:400;margin-bottom:6vh}
 .pi ul{list-style:none;padding:0;margin-top:20px;font-size:14px;color:var(--mute)} .pi li span{display:inline-block;width:130px;color:var(--ink)}
 .artists{display:grid;grid-template-columns:repeat(4,1fr);gap:2.5vw}
 .artists .frame{aspect-ratio:1}
-.artists svg{width:62%;stroke:var(--ink);stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
-.artists svg .f{fill:var(--ink);stroke:none} .artists svg .a{stroke:var(--accent)}
+.artists svg{width:70%;align-self:end;fill:var(--ink);opacity:.55}
 .artists p{margin-top:12px}
 .alumni:hover span{color:var(--accent)!important}
 .alumni{display:inline-block;margin-top:8vh;padding-bottom:6px;border-bottom:1px solid var(--line);color:var(--mute);font-size:14px;max-width:900px}
@@ -169,13 +168,13 @@ flt.innerHTML=`<button data-a="0">All ${PUB.length}</button>`+Object.entries(AR)
 flt.onclick=e=>{if(e.target.dataset.a)show(e.target.dataset.a)};show('0');
 
 /* ---- members with animal faces ---- */
-const EY='<circle class="f" cx="41" cy="56" r="2.6"/><circle class="f" cx="59" cy="56" r="2.6"/>';
+const B=w=>`<path d="M${50-w} 100 Q${50-w} 72 50 70 Q${50+w} 72 ${50+w} 100Z"/><rect x="44" y="52" width="12" height="20" rx="5"/>`;
 const AN={
-fox:'<path d="M24 40 Q50 30 76 40 L50 84Z"/><path d="M26 42 L27 14 L44 34 M74 42 L73 14 L56 34"/>'+EY+'<circle class="f a" cx="50" cy="80" r="2.6" style="fill:var(--accent)"/>',
-cat:'<circle cx="50" cy="58" r="26"/><path d="M29 44 L30 17 L46 34 M71 44 L70 17 L54 34"/>'+EY+'<path class="a" d="M47 64 L53 64 L50 67Z M30 64 L16 61 M30 68 L16 70 M70 64 L84 61 M70 68 L84 70"/>',
-bear:'<circle cx="27" cy="34" r="9"/><circle cx="73" cy="34" r="9"/><circle cx="50" cy="57" r="27"/><ellipse cx="50" cy="67" rx="11" ry="8"/>'+EY+'<ellipse class="f a" cx="50" cy="64" rx="3.5" ry="2.5" style="fill:var(--accent)"/>',
-rabbit:'<ellipse cx="40" cy="26" rx="6" ry="19"/><ellipse cx="60" cy="26" rx="6" ry="19"/><ellipse cx="50" cy="64" rx="23" ry="21"/>'+EY+'<path class="a" d="M48 64 L52 64 L50 66.5Z M50 66.5 Q46 71 43 69 M50 66.5 Q54 71 57 69"/>'};
-const MEM=[['이동휘','Donghwi Lee','M.S. Student','2024.09 –','fox'],['유승민','Seungmin Yu','M.S. Student','2025.03 –','bear'],['손창현','Changhyun Son','Undergraduate Researcher','2026.05 –','cat'],['이재민','Jaemin Lee','Undergraduate Researcher','2026.05 –','rabbit']];
+p1:B(30)+'<ellipse cx="50" cy="40" rx="15" ry="16.5"/>',
+p2:B(32)+'<circle cx="50" cy="42" r="15"/><path d="M33 42 Q29 21 45 19 Q52 13 60 19 Q72 23 67 42Z"/>',
+p3:B(27)+'<path d="M34 44 Q32 23 50 23 Q68 23 66 44 L69 66 Q60 70 56 62 L44 62 Q40 70 31 66Z"/>',
+p4:B(28)+'<circle cx="50" cy="42" r="14.5"/><circle cx="50" cy="22" r="7.5"/>'};
+const MEM=[['이동휘','Donghwi Lee','M.S. Student','2024.09 –','p1'],['유승민','Seungmin Yu','M.S. Student','2025.03 –','p2'],['손창현','Changhyun Son','Undergraduate Researcher','2026.05 –','p3'],['이재민','Jaemin Lee','Undergraduate Researcher','2026.05 –','p4']];
 document.getElementById('members').innerHTML=MEM.map(m=>`<figure><div class="frame"><svg viewBox="0 0 100 100">${AN[m[4]]}</svg></div><p>${m[0]} <span class="label">${m[1]}</span><br><span class="label">${m[2]} · ${m[3]}</span></p></figure>`).join('');
 </script>
 </body>
