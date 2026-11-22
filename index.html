@@ -69,9 +69,9 @@ footer{padding:8vh 6vw;color:var(--mute);font-size:13px;display:flex;justify-con
   <p class="kor" style="margin:0 0 8vh">기능재료의 기작 규명과 설계</p>
   <div class="core"><div class="frame"><span class="label">figure</span></div><div><p class="label">Core theme</p><h3>Electron Active Materials</h3><p class="kor">전자 활성 소재</p></div></div>
   <div class="groups">
-    <div class="group"><p class="gl">Ammonia &amp; Catalysis</p><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">01</p><h3>Catalyst using Active Vacancy for Ammonia Synthesis</h3><p class="kor">활성 공공을 이용한 암모니아 합성 촉매</p></div></div>
-    <div class="group"><p class="gl">Intermetallics · Hydrides · Nitrides</p><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">02</p><h3>Hydrogen Storage Materials</h3><p class="kor">수소 저장 소재</p></div><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">03</p><h3>Electrode Materials Design for Li or Na Ion Battery</h3><p class="kor">리튬·나트륨 이온 전지 전극 소재 설계</p></div></div>
-    <div class="group"><p class="gl">Processing &amp; Devices</p><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">04</p><h3>Defects and Interfaces in Functional Materials</h3><p class="kor">기능재료의 결함과 계면</p></div><div class="room"><div class="frame"><span class="label">figure</span></div><p class="label">05</p><h3>Electronic Structure at Device Interfaces</h3><p class="kor">디바이스 계면의 전자 구조</p></div></div>
+    <div class="group"><p class="gl">Ammonia &amp; Catalysis</p><div class="room"><div class="frame"><span class="label">figure</span></div><h3>Catalyst using Active Vacancy for Ammonia Synthesis</h3><p class="kor">활성 공공을 이용한 암모니아 합성 촉매</p></div></div>
+    <div class="group"><p class="gl">Processing &amp; Devices</p><div class="room"><div class="frame"><span class="label">figure</span></div><h3>Defects and Interfaces in Functional Materials</h3><p class="kor">기능재료의 결함과 계면</p></div><div class="room"><div class="frame"><span class="label">figure</span></div><h3>Electronic Structure at Device Interfaces</h3><p class="kor">디바이스 계면의 전자 구조</p></div></div>
+    <div class="group"><p class="gl">Intermetallics · Hydrides · Nitrides</p><div class="room"><div class="frame"><span class="label">figure</span></div><h3>Hydrogen Storage Materials</h3><p class="kor">수소 저장 소재</p></div><div class="room"><div class="frame"><span class="label">figure</span></div><h3>Electrode Materials Design for Li or Na Ion Battery</h3><p class="kor">리튬·나트륨 이온 전지 전극 소재 설계</p></div></div>
   </div>
 </section>
 
@@ -166,7 +166,7 @@ function show(a){flt.querySelectorAll('button').forEach(b=>b.classList.toggle('o
 PUB.filter(p=>a=='0'||p[1]==a).forEach(p=>{if(p[0]!=y){y=p[0];h+=`<p class="yr">${y}</p>`}
 const k=p[5]?p[5].replace('/','_'):p[4].replace(/\W+/g,'').slice(0,20)+p[0];
 h+=`<div class="cap"><div class="toc"><img src="toc/${k}.jpg" alt="" loading="lazy" onerror="this.replaceWith(document.createTextNode('${p[4].split(/ \d/)[0]}'))"></div><div><b>${p[2]}</b><p class="au">${hl(p)}</p><p class="label" style="margin-top:6px">${p[4]} · ${AR[p[1]]}</p></div>${p[5]?`<a class="doi" href="https://doi.org/${p[5]}">doi →</a>`:'<span></span>'}</div>`});box.innerHTML=h}
-flt.innerHTML=`<button data-a="0">All ${PUB.length}</button>`+Object.entries(AR).map(([k,v])=>`<button data-a="${k}">${v}</button>`).join('');
+flt.innerHTML=`<button data-a="0">All ${PUB.length}</button>`+[2,4,3].map(k=>[k,AR[k]]).map(([k,v])=>`<button data-a="${k}">${v}</button>`).join('');
 flt.onclick=e=>{if(e.target.dataset.a)show(e.target.dataset.a)};show('0');
 
 /* ---- members with animal faces ---- */
