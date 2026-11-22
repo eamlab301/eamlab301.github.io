@@ -6,7 +6,7 @@
 10.1002_sus2.163.jpg	2023	Synthesis of Stable Iodoplumbate and Perovskite for Efficient Annealin
 10.1126_sciadv.adh9104.jpg	2023	Topological insulator as an efficient catalyst for oxidative carbonyla
 10.1021_acsami.3c07578.jpg	2023	Reinforcing synaptic plasticity of defect-tolerant states in alloyed 2
-ACSPhotonics1029302023.jpg	2023	Nature of Photoconductivity in Self-Powered Single-Atomic-Layered Nb-D
+10.1021_acsphotonics.3c00654.jpg	2023	Nature of Photoconductivity in Self-Powered Single-Atomic-Layered Nb-D
 10.1039_D2TA08899A.jpg	2023	Encapsulated C12A7 electride material enables multistep electron trans
 10.1021_acs.inorgchem.2c00884.jpg	2022	Unique Conduction Band Minimum of Semiconductors Possessing a Zincblen
 10.1021_jacs.1c06657.jpg	2021	Dissociative and Associative Concerted Mechanism for Ammonia Synthesis
@@ -25,6 +25,6 @@ ACSPhotonics1029302023.jpg	2023	Nature of Photoconductivity in Self-Powered Sing
 10.1021_acsami.6b05943.jpg	2016	Two-Dimensional Atomic-Layered Alloy Junctions for High-Performance We
 10.1021_acs.nanolett.5b05036.jpg	2016	Alloyed 2D Metal-Semiconductor Atomic Layer Junctions
 10.1021_ja509965z.jpg	2014	New LaMAsHₓ (M = Co, Ni, or Cu) Arsenides with Covalent M–H Chains
-JMaterChemC252802014.jpg	2014	Graphene-based gas sensor: Metal decoration effect and application to 
+10.1039_c4tc00510d.jpg	2014	Graphene-based gas sensor: Metal decoration effect and application to 
 10.1002_ange.201409023.jpg	2014	An Anti-CuO₂-type Metal Hydride Square Net Structure in Ln₂M₂As₂Hₓ (Ln
 10.1021_ic401487q.jpg	2013	Magnetic Structure and Electromagnetic Properties of LnCrAsO with a Zr

@@ -30,7 +30,7 @@ h2{font-size:42px;font-weight:400;margin-bottom:6vh}
 .cat{max-width:900px}
 .filters button{background:none;border:1px solid var(--line);color:var(--mute);font:400 12px Inter;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;margin:0 8px 10px 0;cursor:pointer}
 .filters button.on{color:var(--accent);border-color:var(--accent)}
-.yr{font:400 28px "Cormorant Garamond",serif;color:var(--accent);margin:7vh 0 0}
+.yr{font:400 28px "Cormorant Garamond",serif;color:var(--accent);padding:3vh 0 1vh;cursor:pointer;list-style:none;border-bottom:1px solid var(--line)}.yr::-webkit-details-marker{display:none}.yr::after{content:'+';float:right;color:var(--mute)}details[open]>.yr::after{content:'−'}
 .cap{display:grid;grid-template-columns:200px 1fr auto;gap:28px;align-items:start;padding:22px 0;border-bottom:1px solid var(--line)}
 .cap b{display:block;font:400 21px/1.3 "Cormorant Garamond",serif;margin-bottom:6px}
 .cap .au{font-size:13px;color:var(--mute)} .cap .au strong{color:var(--ink);font-weight:500} .cap .au em{font-style:normal;color:var(--ink)}
@@ -137,7 +137,7 @@ const PUB=[
 [2023,4,'Synthesis of Stable Iodoplumbate and Perovskite for Efficient Annealing-Free Device and Long-term Storage','Jihyun Kim#, Sang-Won Park#, Younghyun Lee, Hideo Hosono, Byungwoo Park, Jinhyun Kim*','SusMat 3, 821','10.1002/sus2.163'],
 [2023,2,'Topological insulator as an efficient catalyst for oxidative carbonylation of amines','Jiang Li, Jiazhen Wu, Sang-Won Park, Masato Sasase, Tian-Nan Ye, Yangfan Lu, Masayoshi Miyazaki, Toshiharu Yokoyama, Tomofumi Tada*, Masaaki Kitano*, Hideo Hosono*','Sci. Adv. 9, eadh9104','10.1126/sciadv.adh9104'],
 [2023,4,'Reinforcing synaptic plasticity of defect-tolerant states in alloyed 2D artificial transistors','Jina Bak, Seunggyu Kim, Kyumin Park, Jeechan Yoon, Mino Yang, Un Jeong Kim, Hideo Hosono, Jihyang Park, Bolim You, Ojun Kwon, Byungjin Cho, Sang-Won Park*, Myung Gwan Hahm*, Moonsang Lee*','ACS Appl. Mater. Interfaces 15, 39539','10.1021/acsami.3c07578'],
-[2023,4,'Nature of Photoconductivity in Self-Powered Single-Atomic-Layered Nb-Doped WSe₂ Phototransistors','Jihyang Park, Seunggyu Kim, Mino Yang, Hideo Hosono, Kyumin Park, Jeechan Yoon, Jina Bak, Bolim You, Sang-Won Park*, Myung Gwan Hahm*, Moonsang Lee*','ACS Photonics 10, 2930',''],
+[2023,4,'Nature of Photoconductivity in Self-Powered Single-Atomic-Layered Nb-Doped WSe₂ Phototransistors','Jihyang Park, Seunggyu Kim, Mino Yang, Hideo Hosono, Kyumin Park, Jeechan Yoon, Jina Bak, Bolim You, Sang-Won Park*, Myung Gwan Hahm*, Moonsang Lee*','ACS Photonics 10, 2930','10.1021/acsphotonics.3c00654'],
 [2023,2,'Encapsulated C12A7 electride material enables multistep electron transfer process for cross-coupling reactions','Bo Dai, Zichuang Li, Miao Xu, Jiang Li, Yangfan Lu, Jiantao Zai, Liuyin Fan, Sang-Won Park, Masato Sasase, Masaaki Kitano, Hideo Hosono, Xin-Hao Li, Tian-Nan Ye*, Jie-Sheng Chen*','J. Mater. Chem. A','10.1039/D2TA08899A'],
 [2022,3,'Unique Conduction Band Minimum of Semiconductors Possessing a Zincblende-Type Framework','Hiroshi Mizoguchi#*, Sang-Won Park#, Takayoshi Katase, Jiahao Yu, Junjie Wang, Hideo Hosono*','Inorg. Chem. 61, 10359','10.1021/acs.inorgchem.2c00884'],
 [2021,2,'Dissociative and Associative Concerted Mechanism for Ammonia Synthesis over Co-Based Catalyst','Tian-Nan Ye#*, Sang-Won Park#, Yangfan Lu#, Jiang Li, Jiazhen Wu, Masato Sasase, Masaaki Kitano*, Hideo Hosono*','J. Am. Chem. Soc. 143, 12857','10.1021/jacs.1c06657'],
@@ -156,16 +156,16 @@ const PUB=[
 [2016,4,'Two-Dimensional Atomic-Layered Alloy Junctions for High-Performance Wearable Chemical Sensor','Byungjin Cho*, Ah Ra Kim, Dong Jae Kim, Hee-Suk Chung, Sun Young Choi, Jung-Dae Kwon, Sang-Won Park, Yonghun Kim, Byoung Hun Lee, Kyu Hwan Lee, Dong-Ho Kim, Jaewook Nam, Myung Gwan Hahm*','ACS Appl. Mater. Interfaces 8, 19635','10.1021/acsami.6b05943'],
 [2016,4,'Alloyed 2D Metal-Semiconductor Atomic Layer Junctions','Ah Ra Kim, Yonghun Kim, Jaewook Nam, Hee-Suk Chung, Dong Jae Kim, Jung-Dae Kwon, Sang-Won Park, Jucheol Park, Sun Young Choi, Byoung Hun Lee, Ji Hyeon Park, Kyu Hwan Lee, Dong-Ho Kim, Sung Mook Choi, Pulickel M. Ajayan, Myung Gwan Hahm*, Byungjin Cho*','Nano Lett. 16, 1890','10.1021/acs.nanolett.5b05036'],
 [2014,3,'New LaMAsHₓ (M = Co, Ni, or Cu) Arsenides with Covalent M–H Chains','Hiroshi Mizoguchi, Sang-Won Park, H. Hiraka, K. Ikeda, Toshiya Otomo, Hideo Hosono*','J. Am. Chem. Soc. 136, 17390','10.1021/ja509965z'],
-[2014,4,'Graphene-based gas sensor: Metal decoration effect and application to a flexible device','Byungjin Cho*, Jongwon Yoon, Myung Gwan Hahm, Dong-Ho Kim, Ah Ra Kim, Yung Ho Kahng, Sang-Won Park, Young-Joo Lee, Sung-Gyu Park, Jung-Dae Kwon, Chang Su Kim, Myungkwan Song, Yongsoo Jeong, Kee-Seok Nam, Heung Cho Ko','J. Mater. Chem. C 2, 5280',''],
+[2014,4,'Graphene-based gas sensor: Metal decoration effect and application to a flexible device','Byungjin Cho*, Jongwon Yoon, Myung Gwan Hahm, Dong-Ho Kim, Ah Ra Kim, Yung Ho Kahng, Sang-Won Park, Young-Joo Lee, Sung-Gyu Park, Jung-Dae Kwon, Chang Su Kim, Myungkwan Song, Yongsoo Jeong, Kee-Seok Nam, Heung Cho Ko','J. Mater. Chem. C 2, 5280','10.1039/c4tc00510d'],
 [2014,3,'An Anti-CuO₂-type Metal Hydride Square Net Structure in Ln₂M₂As₂Hₓ (Ln = La or Sm, M = Ti, V, Cr, or Mn)','Hiroshi Mizoguchi*, Sang-Won Park, Haruhiro Hiraka, Kazutaka Ikeda, Toshiya Otomo, Hideo Hosono','Angew. Chem. Int. Ed. 53, 1','10.1002/ange.201409023'],
 [2013,3,'Magnetic Structure and Electromagnetic Properties of LnCrAsO with a ZrCuSiAs-type Structure (Ln = La, Ce, Pr, and Nd)','Sang-Won Park, Hiroshi Mizoguchi, Shin-ichi Shamoto, Katsuaki Kodama, Toshiya Otomo, Satoru Matsuishi, Toshio Kamiya, Hideo Hosono*','Inorg. Chem. 52, 13363','10.1021/ic401487q']];
 const MEMB=['Donghwi Lee','Seungmin Yu','Changhyun Son','Jaemin Lee'];
 const hl=p=>{let a=p[3].replace(/Sang-Won Park[#*]*/g,m=>`<strong>${m}</strong>`);if(p[0]>=2024)MEMB.forEach(n=>a=a.replace(new RegExp(n+'[#*]*','g'),m=>`<em>${m}</em>`));return a};
 const flt=document.getElementById('flt'),box=document.getElementById('pubs');
-function show(a){flt.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.a==a));let y=0,h='';
-PUB.filter(p=>a=='0'||p[1]==a).forEach(p=>{if(p[0]!=y){y=p[0];h+=`<p class="yr">${y}</p>`}
+function show(a){flt.querySelectorAll('button').forEach(b=>b.classList.toggle('on',b.dataset.a==a));let y=0,h='',first=1;
+PUB.filter(p=>a=='0'||p[1]==a).forEach(p=>{const g=p[0]>=2022?p[0]:'Before 2022';if(g!=y){if(y)h+='</details>';y=g;h+=`<details class="yg"${first?' open':''}><summary class="yr">${g}</summary>`;first=0}
 const k=p[5]?p[5].replace('/','_'):p[4].replace(/\W+/g,'').slice(0,20)+p[0];
-h+=`<div class="cap"><div class="toc"><img src="toc/${k}.jpg" alt="" loading="lazy" onerror="this.replaceWith(document.createTextNode('${p[4].split(/ \d/)[0]}'))"></div><div><b>${p[2]}</b><p class="au">${hl(p)}</p><p class="label" style="margin-top:6px">${p[4]} · ${AR[p[1]]}</p></div>${p[5]?`<a class="doi" href="https://doi.org/${p[5]}">doi →</a>`:'<span></span>'}</div>`});box.innerHTML=h}
+h+=`<div class="cap"><div class="toc"><img src="toc/${k}.jpg" alt="" loading="lazy" onerror="this.replaceWith(document.createTextNode('${p[4].split(/ \d/)[0]}'))"></div><div><b>${p[2]}</b><p class="au">${hl(p)}</p><p class="label" style="margin-top:6px">${p[4]} · ${AR[p[1]]}</p></div>${p[5]?`<a class="doi" href="https://doi.org/${p[5]}">doi →</a>`:'<span></span>'}</div>`});if(y)h+='</details>';box.innerHTML=h}
 flt.innerHTML=`<button data-a="0">All ${PUB.length}</button>`+[2,4,3].map(k=>[k,AR[k]]).map(([k,v])=>`<button data-a="${k}">${v}</button>`).join('');
 flt.onclick=e=>{if(e.target.dataset.a)show(e.target.dataset.a)};show('0');
 
